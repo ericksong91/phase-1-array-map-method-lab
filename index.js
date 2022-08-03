@@ -12,5 +12,12 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+  function mapArrayChangeFoo(item) {
+    let itemCopy = item.split(' ').map((word) => word[0].toUpperCase() + word.slice(1)).join(' ')
+    return itemCopy
+  }
+  const mapArrayChange = tutorials.map(mapArrayChangeFoo)
+  return mapArrayChange
 }
+
+console.log(titleCased())
